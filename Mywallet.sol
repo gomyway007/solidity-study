@@ -22,3 +22,5 @@ contract Mywallet{
         return this.balance();
     }
 }
+
+/*没什么功能，就是存钱取钱*/

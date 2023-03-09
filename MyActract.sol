@@ -35,3 +35,7 @@ contract MyAbstract{
         return mc.count();
     }
 }
+
+/*
+    主要是抽象合约的使用，MyCounter继承了Counter，并在MyAbstract实例化使用。
+*/

@@ -1,4 +1,3 @@
-
 //SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.0;
@@ -22,7 +21,16 @@ contract SelectSort is Sort{
         return a;
     }
 
-    function test() public pure returns(uint[] memory){
+}
+
+contract MySort{
+    SelectSort public ss;
+
+    function SetAddress(address _addr) public {
+        ss = SelectSort(_addr);
+    }
+
+    function test() public view returns(uint[] memory){
         //uint[10] memory arr = [uint(7),3,6,8,1,9,2,5,4,10];
         uint[] memory arr = new uint[](10);
         arr[0] = 7;
@@ -36,10 +44,8 @@ contract SelectSort is Sort{
         arr[8] = 4;
         arr[9] = 10;
 
-        sort(arr);
+        arr = ss.sort(arr);
         return arr;
     }
 
-
 }
-

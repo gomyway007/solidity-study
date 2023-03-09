@@ -24,3 +24,5 @@ contract MyInterface{
         Icounter(_addr).incr();
     }
 }
+
+/*演示接口合约的使用*/

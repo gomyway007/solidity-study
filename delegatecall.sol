@@ -34,6 +34,10 @@ contract A {
 
         require( success && data.length == 0);
     }
+    
+    function setVars(B _b,uint _num) public {
+        _b.setVars(_num);//和上面setVarsCall一样
+    }
 }
 /* A使用委托调用，改变的是自己的状态，B不受影响
     使用普通调用，改变了B的状态，自身不受影响
